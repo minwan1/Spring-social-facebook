@@ -83,7 +83,7 @@ public class SocialConfig extends SocialConfigurerAdapter{
 	* provider측에서 인증이 끝난후에 userconnection에 정보가 저장된후에 구현해야할 인터페이스이다. ConnectionSignUp의 signIn메소드는 어플리케이션의 로그인 로직을 구현하면된다.
 	
 	예제에서는 아래의 테이블도 추가해줘야한다.
-	```sql
+```sql
 CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email` varchar(128) NOT NULL,
