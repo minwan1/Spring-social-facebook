@@ -26,7 +26,7 @@ public class PostSocialSignInAdapter implements SignInAdapter {
 		User user = userRepository.findByEmail(profile.getEmail());
 		HttpServletRequest req = ((ServletWebRequest) request).getRequest();
 		req.getSession().setAttribute("loggedUser", user);
-		return null; // will return to postSignInUrl
+		return "/"; // will return to postSignInUrl 로그인한이후에 이동될 사이트인듯 
 	}
 
 }

@@ -29,6 +29,7 @@
 			</a>
 		</div>
 		<form id="fbSignIn" th:action="@{/signin/facebook}" method="POST">
+		<input type="hidden" name="scope" value="public_profile,user_friends,email" />
 		</form>
 		<form class="email-login">
 			<div class="u-form-group">

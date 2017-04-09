@@ -33,9 +33,8 @@ public class SocialConfig extends SocialConfigurerAdapter{
 	
 	@Override
 	public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
-		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
-				connectionFactoryLocator, Encryptors.text(environment.getProperty("social.security.encryptPassword"),
-						environment.getProperty("social.security.encryptSalt")));
+//		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,connectionFactoryLocator, Encryptors.text(environment.getProperty("social.security.encryptPassword"),environment.getProperty("social.security.encryptSalt")));
+		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,connectionFactoryLocator, Encryptors.noOpText());
 		repository.setConnectionSignUp(new SocialImplicitSignUp(userRepository));
 		return repository;
 	}

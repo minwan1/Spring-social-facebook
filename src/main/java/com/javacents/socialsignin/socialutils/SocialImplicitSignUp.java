@@ -22,4 +22,5 @@ public class SocialImplicitSignUp implements ConnectionSignUp {
 		userRepository.save(user);
 		return user.getEmail();
 	}
+	
 }
