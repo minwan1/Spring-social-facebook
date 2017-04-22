@@ -1,6 +1,7 @@
 package com.javacents.socialsignin.socialutils;
 
 import javax.inject.Inject;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.social.connect.Connection;
